@@ -1,0 +1,210 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-size: 1.6rem;
+  font-family: $font-family;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/bg-pattern-top-mobile.svg),
+    url(../images/bg-pattern-bottom-mobile.svg);
+  background-position: top left, bottom right;
+  background-repeat: no-repeat, no-repeat;
+  @include mq('small') {
+    background-image: url(../images/bg-pattern-top-desktop.svg),
+      url(../images/bg-pattern-bottom-desktop.svg);
+  }
+}
+
+.main {
+  max-width: 375px;
+  width: 90%;
+  margin-bottom: 5rem;
+  @include mq('tablet') {
+    max-width: 1140px;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 10rem;
+  @include mq('tablet') {
+    align-items: flex-start;
+  }
+}
+
+.text {
+  text-align: center;
+  &-heading {
+    font-size: 3.5rem;
+    color: $color-Very-Dark-Magenta;
+    @include mq('desktop') {
+      font-size: 4rem;
+    }
+    @include mq('large') {
+      font-size: 5rem;
+    }
+  }
+  &-paragraph {
+    font-size: 1.45rem;
+    line-height: 1.7;
+    font-weight: 500;
+    color: $color-Dark-Grayish-Magenta;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    @include mq('tablet') {
+      margin-top: 1rem;
+    }
+  }
+  @include mq('tablet') {
+    flex-basis: 40%;
+    text-align: left;
+  }
+}
+.reviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  row-gap: 2rem;
+  font-size: 1.3rem;
+  color: $color-Very-Dark-Magenta;
+  width: 100%;
+  @include mq('tablet') {
+    flex-basis: 40%;
+    row-gap: 3rem;
+  }
+  &-item {
+    border-radius: 0.8rem;
+    width: 100%;
+    padding: 1.5rem 0;
+    background-color: $color-Light-Grayish-Magenta;
+    transition: box-shadow .3s ease;
+    cursor: pointer;
+    @include mq('tablet') {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      min-width: 40.5rem;
+      &:first-child {
+        position: relative;
+        left: -8rem;
+      }
+      &:nth-child(2) {
+        position: relative;
+        left: -4rem;
+      }
+    }
+    &:hover {
+      box-shadow: 0 5px 10px 0 rgba($color-Very-Dark-Magenta, .3);
+    }
+    @include mq('desktop') {
+      padding: 2rem 0;
+    }
+    &-stars {
+      margin-bottom: 1rem;
+      @include mq('tablet') {
+        margin-bottom: 0;
+        margin-left: 2rem;
+      }
+      .star {
+        width: 1.8rem;
+        transition: transform .3s ease;
+        &:not(:last-child) {
+          margin-right: 0.4rem;
+        }
+        &:hover {
+          transform: scale(1.5);
+        }
+      }
+    }
+  }
+}
+.comments {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 5rem;
+  @include mq('tablet') {
+    flex-direction: row;
+  }
+  &-item {
+    background-color: $color-Very-Dark-Magenta;
+    color: $color-Light-Grayish-Magenta;
+    font-size: 1.4rem;
+    line-height: 1.7;
+    padding: 4rem 3.5rem;
+    border-radius: 1rem;
+    transition: box-shadow .3s ease;
+    &:hover {
+      box-shadow: 10px 10px 10px 0 rgba($color-Very-Dark-Magenta, .3);
+    }
+    @include mq('tablet') {
+      &:nth-child(2) {
+        position: relative;
+        top: 3rem;
+      }
+      &:last-child {
+        position: relative;
+        top: 6rem;
+      }
+    }
+    
+    &-text {
+      font-size: 1.3rem;
+      line-height: 1.8;
+      opacity: 0.9;
+    }
+  }
+}
+
+.user {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  &-img {
+    border-radius: 50%;
+    width: 4.5rem;
+    margin-right: 3rem;
+  }
+  &-name {
+    font-weight: 700;
+    opacity: 0.9;
+  }
+  &-title {
+    color: $color-Soft-Pink;
+    opacity: 0.9;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: $color-Very-Dark-Magenta;
+  font-weight: 500;
+  @include mq('tablet') {
+    margin-top: 5rem;
+  }
+  a {
+    text-decoration: none;
+    color: $color-Soft-Pink;
+  }
+}
