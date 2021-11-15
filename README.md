@@ -25,8 +25,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: []()
-- Live Site URL: []()
+- Solution URL: [https://www.frontendmentor.io/solutions/social-proof-section-solution-pe45_5i2S](https://www.frontendmentor.io/solutions/social-proof-section-solution-pe45_5i2S)
+- Live Site URL: [https://fundakartal.github.io/social-proof-section/](https://fundakartal.github.io/social-proof-section/)
 
 ## My process
 
