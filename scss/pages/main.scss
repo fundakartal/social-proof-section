@@ -92,15 +92,12 @@ body {
     row-gap: 3rem;
   }
   &-item {
-    // display: flex;
-
     border-radius: 0.8rem;
     width: 100%;
     padding: 1.5rem 0;
     background-color: $color-Light-Grayish-Magenta;
     transition: box-shadow 0.3s ease;
     cursor: pointer;
-
     @include mq('tablet') {
       display: flex;
       align-items: center;
