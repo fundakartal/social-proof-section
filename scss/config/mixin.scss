@@ -6,7 +6,7 @@
     }
   } @else if ($width == 'tablet') {
     // Medium devices (tablets, 768px and up)
-    @media (min-width: 869px) {
+    @media (min-width: 964px) {
       @content;
     }
   } @else if($width == 'desktop') {

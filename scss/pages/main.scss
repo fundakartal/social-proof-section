@@ -96,7 +96,7 @@ body {
     width: 100%;
     padding: 1.5rem 0;
     background-color: $color-Light-Grayish-Magenta;
-    transition: box-shadow .3s ease;
+    transition: box-shadow 0.3s ease;
     cursor: pointer;
     @include mq('tablet') {
       display: flex;
@@ -113,7 +113,7 @@ body {
       }
     }
     &:hover {
-      box-shadow: 0 5px 10px 0 rgba($color-Very-Dark-Magenta, .3);
+      box-shadow: 0 5px 10px 0 rgba($color-Very-Dark-Magenta, 0.3);
     }
     @include mq('desktop') {
       padding: 2rem 0;
@@ -126,7 +126,7 @@ body {
       }
       .star {
         width: 1.8rem;
-        transition: transform .3s ease;
+        transition: transform 0.3s ease;
         &:not(:last-child) {
           margin-right: 0.4rem;
         }
@@ -152,9 +152,14 @@ body {
     line-height: 1.7;
     padding: 4rem 3.5rem;
     border-radius: 1rem;
-    transition: box-shadow .3s ease;
+    transition: box-shadow 0.3s ease;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 1fr;
+    row-gap: 2rem;
+    align-items: center;
     &:hover {
-      box-shadow: 10px 10px 10px 0 rgba($color-Very-Dark-Magenta, .3);
+      box-shadow: 10px 10px 10px 0 rgba($color-Very-Dark-Magenta, 0.3);
     }
     @include mq('tablet') {
       &:nth-child(2) {
@@ -166,11 +171,16 @@ body {
         top: 6rem;
       }
     }
-    
+
     &-text {
+      grid-row: 2 / 3;
+      grid-column-start: span 2;
       font-size: 1.3rem;
       line-height: 1.8;
       opacity: 0.9;
+    }
+    figcaption {
+      grid-column: 2 / 3;
     }
   }
 }
@@ -180,6 +190,7 @@ body {
   align-items: flex-start;
   margin-bottom: 2rem;
   &-img {
+    grid-column: 1 / 2;
     border-radius: 50%;
     width: 4.5rem;
     margin-right: 3rem;
