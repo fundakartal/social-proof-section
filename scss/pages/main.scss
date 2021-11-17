@@ -92,12 +92,15 @@ body {
     row-gap: 3rem;
   }
   &-item {
+    // display: flex;
+
     border-radius: 0.8rem;
     width: 100%;
     padding: 1.5rem 0;
     background-color: $color-Light-Grayish-Magenta;
     transition: box-shadow 0.3s ease;
     cursor: pointer;
+
     @include mq('tablet') {
       display: flex;
       align-items: center;
@@ -118,21 +121,18 @@ body {
     @include mq('desktop') {
       padding: 2rem 0;
     }
-    &-stars {
-      margin-bottom: 1rem;
+    .reviews-item-stars {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 1.5rem;
+      width: 119px;
+      height: 2rem;
+      background-image: url(../images/icon-star.svg);
+      background-repeat: space;
+      background-size: 2rem;
       @include mq('tablet') {
-        margin-bottom: 0;
-        margin-left: 2rem;
-      }
-      .star {
-        width: 1.8rem;
-        transition: transform 0.3s ease;
-        &:not(:last-child) {
-          margin-right: 0.4rem;
-        }
-        &:hover {
-          transform: scale(1.5);
-        }
+        margin: unset;
+        margin-left: 3rem;
       }
     }
   }
